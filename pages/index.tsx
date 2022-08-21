@@ -1,13 +1,19 @@
 import styled from 'styled-components';
+import MainLayout from '../components/mainLayout/MainLayout';
 
-const StyledIndex = styled.h1`
-  color: red;
-  font-size: 2rem;
-  padding: 2em;
+const StyledHeader = styled.h1`
+  ${({ theme }) => `
+  font-size: 5rem;
+  padding: ${theme['padding-large']};
+`}
 `;
 
 const Index = () => {
-  return <StyledIndex>Index</StyledIndex>;
+  return (
+    <MainLayout>
+      <StyledHeader>Hello World</StyledHeader>
+    </MainLayout>
+  );
 };
 
 export default Index;
