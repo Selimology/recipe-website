@@ -10,7 +10,7 @@ const StyledHeader = styled.h1`
 
 const Index = () => {
   return (
-    <MainLayout>
+    <MainLayout title="recipe">
       <StyledHeader>Hello World</StyledHeader>
     </MainLayout>
   );
