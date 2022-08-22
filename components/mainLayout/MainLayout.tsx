@@ -3,6 +3,8 @@ import { theme } from '../../utils/theme';
 import { GlobalStyles } from '../../utils/globalStyles';
 import { Layout } from 'antd';
 import Head from 'next/head';
+import MainFooter from '../../components/mainLayout/MainFooter';
+
 const { Content } = Layout;
 
 const MainHead = ({ title }: { title: string }) => {
@@ -44,6 +46,7 @@ const MainLayout = ({ children, title }: Props) => {
       <GlobalStyles />
       <Layout>
         <Content>{children}</Content>
+        <MainFooter />
       </Layout>
     </ThemeProvider>
   );
