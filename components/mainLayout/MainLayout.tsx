@@ -1,7 +1,9 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../utils/theme';
 import { GlobalStyles } from '../../utils/globalStyles';
+import { Layout } from 'antd';
 import Head from 'next/head';
+const { Content } = Layout;
 
 const MainHead = ({ title }: { title: string }) => {
   return (
@@ -40,7 +42,9 @@ const MainLayout = ({ children, title }: Props) => {
     <ThemeProvider theme={theme}>
       <MainHead title={title} />
       <GlobalStyles />
-      {children}
+      <Layout>
+        <Content>{children}</Content>
+      </Layout>
     </ThemeProvider>
   );
 };
