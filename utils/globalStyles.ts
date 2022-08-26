@@ -12,6 +12,10 @@ export const heading = (size) => {
 export const GlobalStyles = createGlobalStyle`
 ${({ theme }) => `
 
+*{
+  margin:${theme['margin-zero']};
+  padding:${theme['padding-zero']};
+}
 h1{
   ${heading(theme['font-size-xlarge'])}
 }
