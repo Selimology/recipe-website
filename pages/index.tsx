@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MainLayout from '../components/mainLayout/MainLayout';
+import MainLayout from '../components/MainLayout/MainLayout';
 
 const StyledHeader = styled.h1`
   ${({ theme }) => `
