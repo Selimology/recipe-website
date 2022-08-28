@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import MainLayout from '../components/MainLayout/MainLayout';
+import { initializeApollo, addApolloState } from '../lib/apolloClient';
 
 const StyledHeader = styled.h1`
   ${({ theme }) => `
@@ -15,5 +16,18 @@ const Index = () => {
     </MainLayout>
   );
 };
+
+export async function getServerSideProps() {
+  const apolloClient = initializeApollo();
+
+  // await apolloClient.query({
+  //   query: ALL_POSTS_QUERY,
+  //   variables: allPostsQueryVars,
+  // });
+
+  return addApolloState(apolloClient, {
+    props: {},
+  });
+}
 
 export default Index;
