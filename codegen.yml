@@ -1,0 +1,11 @@
+documents: modules/graphql/**/index.ts
+overwrite: true
+schema: 'https://api-eu-central-1.hygraph.com/v2/cl7cxhyom4ioo01uf3wb2clbe/master'
+generates:
+  generated/resolvers-types.tsx:
+    config:
+      useIndexSignature: true
+    plugins:
+      - typescript
+      - typescript-resolvers
+      - typescript-operations
